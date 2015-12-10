@@ -30,9 +30,9 @@ def start_work(long_break, short_break, work, cycle_time):
 
 
 def start_pomodoro(options):
-    long_break = options.long_break # * 60
-    short_break = options.short_break# * 60
-    work = options.work #* 60
+    long_break = options.long_break * 60
+    short_break = options.short_break * 60
+    work = options.work * 60
     cycle = options.cycle
     start_work(long_break, short_break, work, cycle)
 
