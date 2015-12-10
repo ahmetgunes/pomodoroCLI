@@ -1,7 +1,7 @@
 A short pomodoro application written in Python3.4 
 
 Here is the --help output
-
+```
 -longbreak=LONG_BREAK, --lb=LONG_BREAK
                         Defines long break in minutes. [default: 15]
   --shortbreak=SHORT_BREAK, --sb=SHORT_BREAK
@@ -10,5 +10,6 @@ Here is the --help output
   -c CYCLE, --cycle=CYCLE
                         Defines long break cycles. [default: 3]
 
+```
 
 Feel free to contribute!
