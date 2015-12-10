@@ -12,7 +12,3 @@ Here is the --help output
 
 
 Feel free to contribute!
-
-The aims are
-1.to fix commands (running on backgroun)
-2.to create notifications on Ubuntu and Mac
