@@ -1,24 +1,33 @@
 import sched
 import time
 from optparse import OptionParser
+import subprocess
+import notify2
+
+
+def send_message(message):
+    notify2.init('Pomodoro')
+    nf = notify2.Notification('POMODORO', message)
+    nf.set_urgency(notify2.URGENCY_CRITICAL)
+    nf.show()
 
 
 def start_long_break(long_break, short_break, work, cycle_time):
-    print("Have a nice long break")
+    send_message("Have a nice long break")
     scheduler = sched.scheduler(time.time, time.sleep)
     scheduler.enter(long_break, 1, start_work, argument=(long_break, short_break, work, cycle_time))
     scheduler.run()
 
 
 def start_short_break(long_break, short_break, work, cycle_time):
-    print("Have a nice short break")
+    send_message("Have a nice short break")
     scheduler = sched.scheduler(time.time, time.sleep)
     scheduler.enter(short_break, 1, start_work, argument=(long_break, short_break, work, cycle_time))
     scheduler.run()
 
 
 def start_work(long_break, short_break, work, cycle_time):
-    print("Work harder")
+    send_message("Work harder")
     scheduler = sched.scheduler(time.time, time.sleep)
     if cycle_time % 3 == 0:
         cycle_time += 1
